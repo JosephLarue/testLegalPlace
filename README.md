@@ -45,3 +45,18 @@ To make sure that you will not break anything in the existing code, we added the
 ```sh
 yarn start
 ```
+
+
+## Test JL :
+
+First we need to install Jest :
+
+```sh
+npm install --save-dev jest
+```
+
+Then we run the Tests :
+
+```sh
+npx jest pharmacy.test.js
+```
