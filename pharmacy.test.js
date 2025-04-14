@@ -6,4 +6,9 @@ describe("Pharmacy", () => {
       [new Drug("test", 1, 2)],
     );
   });
+    it("Test Dafalgan", () => {
+  expect(new Pharmacy([new Drug("Dafalgan", 10, 10)]).updateBenefitValue()).toEqual(
+    [new Drug("Dafalgan", 9, 8)],
+  );
+});
 });

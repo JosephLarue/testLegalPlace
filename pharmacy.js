@@ -68,6 +68,19 @@ updateBenefitValue() {
       drug.expiresIn -= 1;
     }
   };
+  
+  const processDafalgan = (drug) => {
+    if (drug.expiresIn <= 0)
+    {
+      updateBenefit(drug, -4);
+      drug.expiresIn -= 1;
+    }
+    else
+    {
+      updateBenefit(drug, -2);
+      drug.expiresIn -= 1;
+    }
+  };
 
   for (const drug of this.drugs) {
     switch (drug.name) {
@@ -79,6 +92,9 @@ updateBenefitValue() {
         break;
       case "Magic Pill":
         processMagicPill(drug);
+        break;
+      case "Dafalgan":
+        processDafalgan(drug);
         break;
       default:
         processOtherDrugs(drug);
